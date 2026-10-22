@@ -12,11 +12,11 @@
     <!-- Сцена с AR -->
     <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
 
-      <!-- Маркер 1: корона → показываем 3D-модель -->
-      <a-marker type="image" url="markers/marker_glb.png>
-        <!-- Модель Снежной королевы: scale=0.5 (полметра), поворот подобран под Y Up -->
-        <a-entity gltf-model="url(SnowQween.glb)" scale="0.5 0.5 0.5" rotation="-90 0 0"></a-entity>
-      </a-marker>
+     <!-- Маркер 1: корона → показываем 3D-модель -->
+<a-marker type="image" url="markers/marker_glb.png">
+  <!-- Модель Снежной королевы: scale=0.5 (полметра), поворот подобран под Y Up -->
+  <a-entity gltf-model="url(SnowQween.glb)" scale="0.5 0.5 0.5" rotation="-90 0 0"></a-entity>
+</a-marker>
 
       <!-- Маркер 2: снежинка → заглушка под видео -->
       <a-marker type="image" url="markers/marker_video.png?v=2">
