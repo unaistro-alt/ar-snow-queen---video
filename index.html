@@ -4,48 +4,26 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no" />
     <title>AR Snow Queen</title>
-
-    <!-- Стабильная версия A-Frame -->
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-    <!-- Стабильная версия AR.js через cdn.jsdelivr (меньше мерцаний) -->
     <script src="https://cdn.jsdelivr.net/npm/aframe-ar@0.7.1/build/aframe-ar.min.js"></script>
-
     <style>
       body { margin: 0; overflow: hidden; }
       .arjs-loader {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.6);
-        color: #fff;
-        font-family: monospace;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0,0,0,0.6); color: #fff; font-family: monospace;
+        display: flex; justify-content: center; align-items: center;
       }
     </style>
   </head>
   <body>
     <div class="arjs-loader">Наведи камеру на Hiro</div>
-
-    <a-scene
-      vr-mode-ui="enabled: false"
-      arjs="sourceType: webcam; debugUIEnabled: false;"
-    >
+    <a-scene vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false;">
       <a-marker preset="hiro">
-        <a-entity
-          gltf-model="#snowqween-mesh"
-          scale="0.5 0.5 0.5"
-        ></a-entity>
+        <a-entity gltf-model="#snowqween-mesh" scale="0.5 0.5 0.5"></a-entity>
       </a-marker>
-
       <assets>
-        <!-- Важно: имя файла должно совпадать буква в букву с файлом в репозитории -->
         <a-asset-item id="snowqween-mesh" src="SnowQween.glb"></a-asset-item>
       </assets>
-
       <a-entity camera></a-entity>
     </a-scene>
   </body>
