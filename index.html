@@ -4,9 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no" />
     <title>AR Snow Queen</title>
-    <!-- Стабильная версия A-Frame -->
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-    <!-- Стабильная версия AR.js (не raw.githack, меньше мерцаний) -->
     <script src="https://cdn.jsdelivr.net/npm/aframe-ar@0.7.1/build/aframe-ar.min.js"></script>
     <style>
       body { margin: 0; overflow: hidden; }
@@ -24,16 +22,10 @@
       arjs="sourceType: webcam; debugUIEnabled: false;"
     >
       <a-marker preset="hiro">
-        <a-entity
-          gltf-model="#snowqween-mesh"
-          scale="0.5 0.5 0.5"
-          rotation="-90 0 0"
-          position="0 0.5 0">
-        </a-entity>
+        <a-entity gltf-model="#snowqween-mesh" scale="0.5 0.5 0.5"></a-entity>
       </a-marker>
 
       <assets>
-        <!-- Файл должен лежать рядом с index.html, имя буква в букву -->
         <a-asset-item id="snowqween-mesh" src="SnowQween.glb"></a-asset-item>
       </assets>
 
